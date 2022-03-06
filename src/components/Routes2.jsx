@@ -6,21 +6,11 @@ export const Routes2 = () => {
   return (
     <div className="p-4">
         <Routes>
-            <Route exact path="/">
-              
-            </Route>
-            <Route exact path = "/search">
-              
-            </Route>
-            <Route exact path = "/images">
-              
-            </Route>
-            <Route exact path = "/news">
-              
-            </Route>
-            <Route exact path = "/news">
-               
-            </Route>
+            <Route exact path="/" element={<Navigate to="/search" />}/>
+            <Route exact path="/search" element={<Results />} />
+            <Route exact path="/images" element={<Results />} /> 
+            <Route exact path="/news" element={<Results />} />
+            <Route exact path="/videos" element={<Results />} /> 
         </Routes>
         
     </div>
