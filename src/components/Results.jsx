@@ -9,9 +9,12 @@ export const Results = () => {
   const { results, isLoading, getResults, searchTerm } = useResultContext();
   const location = useLocation(); // images, news, videos, 
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading />
 
-  return (
-    <div>Results</div>
-  );
+  switch (location.pathname){
+    case '/search':
+      return 'SEARCH';
+    default:
+      return 'ERROR!';
+  }
 }
