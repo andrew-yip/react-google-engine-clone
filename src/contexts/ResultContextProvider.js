@@ -9,6 +9,7 @@ export const ResultContextProvider = ( {children} ) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     // /videos, /search, /images
+    // to make api calls
     const getResults = async (type) => {
 
         setIsLoading(true);
@@ -24,7 +25,7 @@ export const ResultContextProvider = ( {children} ) => {
         });
 
         const data = await response.json();
-
+        console.log(data);
         setResults(data);
         setIsLoading(false);
 
