@@ -18,10 +18,10 @@ export const ResultContextProvider = ( {children} ) => {
             method: 'GET',
             headers: {
                 'X-User-Agent': 'desktop',
-                'X-Proxy-Location': 'US',
+                'X-Proxy-Location': 'EU',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
                 'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-            }
+              }
         });
 
         const data = await response.json();
