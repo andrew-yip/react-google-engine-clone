@@ -12,6 +12,7 @@ export const ResultContextProvider = ( {children} ) => {
     // to make api calls
     const getResults = async (type) => {
 
+        // set loading to true (to fetch data from api call)
         setIsLoading(true);
 
         const response = await fetch(`${baseUrl}${type}`, {
