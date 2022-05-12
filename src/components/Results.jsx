@@ -36,11 +36,11 @@ export const Results = () => {
         </div>
       );
       case '/images':
-        return 'images';
+        return 'IMAGES PLACE HOLDER';
         case '/news':
-          return 'NEWS';
+          return 'NEWS PLACE HOLDER';
       case '/videos':
-        return 'VIDEOS';
+        return 'VIDEOS PLACE HOLDER';
     default:
       return 'ERROR!';
   }
