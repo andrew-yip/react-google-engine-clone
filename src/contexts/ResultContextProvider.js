@@ -19,15 +19,25 @@ export const ResultContextProvider = ( {children} ) => {
             method: 'GET',
             headers: {
                 'X-User-Agent': 'desktop',
-                'X-Proxy-Location': 'EU',
+                'X-Proxy-Location': 'US',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
                 'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
               },
         });
 
         const data = await response.json();
+
+        if (type.includes('/news')){
+            setResults(data.entries);
+        } else if (type.includes('/images')) {
+            setResults(data.image_results);
+        } else {
+            setResults(data.results);
+        }
+
+
         //console.log(data);
-        setResults(data);
+        //setResults(data);
         setIsLoading(false);
 
     }
