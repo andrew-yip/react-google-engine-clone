@@ -22,7 +22,7 @@ export const ResultContextProvider = ( {children} ) => {
                 'X-Proxy-Location': 'EU',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
                 'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-              }
+              },
         });
 
         const data = await response.json();
