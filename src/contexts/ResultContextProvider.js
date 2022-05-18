@@ -6,7 +6,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider = ( {children} ) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('Software Engineering');
+    const [searchTerm, setSearchTerm] = useState('Coding');
 
     // /videos, /search, /images
     // to make api calls
