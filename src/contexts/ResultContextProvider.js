@@ -6,7 +6,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider = ( {children} ) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('Coding');
+    const [searchTerm, setSearchTerm] = useState('');
 
     // /videos, /search, /images
     // to make api calls
@@ -21,7 +21,7 @@ export const ResultContextProvider = ( {children} ) => {
                 'X-User-Agent': 'desktop',
                 'X-Proxy-Location': 'US',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-                'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
+                'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
               },
         });
 
